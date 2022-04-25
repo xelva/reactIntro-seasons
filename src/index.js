@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import SeasonDisplay from './SeasonDisplay';
+import SeasonDisplay from './SeasonDisplay';
+import Loader from './Loader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 class App extends React.Component {
-    /* constructor(props) {
-        super(props);
-        this.state = { lat: null, errorMessage: '' };
-    } */
-
-    state = { lat: null, errorMessage: ''};
+    state = { lat: null, errorMessage: '' };
 
     componentDidMount() {
         console.log('...initial component renedered to the screen')
@@ -31,10 +27,10 @@ class App extends React.Component {
         }
 
         if (!this.state.errorMessage && this.state.lat) {
-            return <div>Latitude: {this.state.lat}</div>
+            return <SeasonDisplay lat={this.state.lat}/>
         }
 
-        return <div>Loading</div>
+        return <Loader message="Waiting for location" />
        
     }
 
