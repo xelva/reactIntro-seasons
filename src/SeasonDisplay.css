@@ -1,14 +1,14 @@
 
 .icon-left {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 30px;
+    left: 30px;
 }
 
 .icon-right {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 30px;
+    right: 30px;
 }
 
 .season-display {
@@ -28,8 +28,14 @@
 
 .winter {
     background-color: aliceblue;
+    border-radius: 5px;
 }
 
 .summer {
     background-color: orange;
+    border-radius: 5px;
+}
+
+.border-red {
+    margin: 15px;
 }

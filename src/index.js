@@ -20,8 +20,8 @@ class App extends React.Component {
     componentDidUpdate() {
         console.log('...and it has been updated and rerendered')
     }
-    //render is required by react
-    render() {
+
+    renderContent () {
         if (this.state.errorMessage && !this.state.lat) {
             return <div>Error: {this.state.errorMessage}</div>
         }
@@ -31,7 +31,14 @@ class App extends React.Component {
         }
 
         return <Loader message="Waiting for location" />
-       
+    }
+    //render is required by react
+    render() {
+        return (
+        <div className="border-red">
+            {this.renderContent()}
+        </div>
+        )
     }
 
 }
